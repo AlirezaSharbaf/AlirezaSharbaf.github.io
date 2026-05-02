@@ -16,6 +16,7 @@
   --bg:#ffffff;
   --surface:#f9fafb;
   --radius:10px;
+  --max-w:1100px;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;color:var(--text);background:var(--bg);line-height:1.75;font-size:15.5px}
@@ -35,7 +36,7 @@ nav{
 
 /* HERO */
 .hero{
-  max-width:900px;margin:0 auto;
+  max-width:var(--max-w);margin:0 auto;
   padding:72px 6% 64px;
   display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;
 }
@@ -61,7 +62,7 @@ nav{
   font-family:'Lora',serif;font-size:2.4rem;font-weight:700;
   line-height:1.15;letter-spacing:-.5px;color:var(--text);margin-bottom:14px;
 }
-.hero-bio{font-size:.95rem;color:var(--muted);max-width:440px;margin-bottom:24px}
+.hero-bio{font-size:.95rem;color:var(--muted);max-width:520px;margin-bottom:24px}
 .links{display:flex;flex-wrap:wrap;gap:10px}
 .link-btn{
   display:inline-flex;align-items:center;gap:6px;
@@ -74,7 +75,7 @@ nav{
 .link-outline:hover{background:var(--accent-lt)}
 
 /* SECTION */
-.wrap{max-width:900px;margin:0 auto;padding:0 6%}
+.wrap{max-width:var(--max-w);margin:0 auto;padding:0 6%}
 section{padding:56px 0;border-top:1px solid var(--border)}
 .sec-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:8px}
 .sec-title{font-family:'Lora',serif;font-size:1.55rem;font-weight:700;color:var(--text);margin-bottom:32px}
@@ -220,7 +221,7 @@ footer{
   <div>
     <div class="hero-tag">Ph.D. Student · University of Minnesota</div>
     <h1>Alireza Sharbafchi</h1>
-    <p class="hero-bio">Researcher in stochastic modeling, queueing systems, and mechanism design — building analytical models and optimization tools for decision-making under uncertainty.</p>
+    <p class="hero-bio">I am a Ph.D. student in the Department of Industrial &amp; Systems Engineering at the University of Minnesota. My research focuses on stochastic modeling, queueing systems, and mechanism design — combining analytical theory with Python-based optimization tools to study decision-making under uncertainty. I have published my work at leading venues including <strong style="color:var(--text)">IEEE ISIT</strong> and the <strong style="color:var(--text)">Allerton Conference</strong> on Communication, Control and Computing.</p>
     <div class="links">
       <a class="link-btn link-primary" href="mailto:sharb019@umn.edu">Email me</a>
       <a class="link-btn link-outline" href="https://scholar.google.com/citations?user=oZZttsgAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
