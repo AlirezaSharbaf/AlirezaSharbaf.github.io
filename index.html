@@ -252,7 +252,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
           </div>
         </div>
         <div class="pub-abstract">
-          We study the problem of recovering a hierarchical influence chain among a set of agents in a distributed fact-checking network. Given observations of agents' binary labels on a sequence of statements, we propose three algorithms for reconstructing the latent influence graph structure and estimating the associated parameters. The recovered chain enables more robust inference of statement validity by exploiting the hierarchical dependence among agents' reliability levels.
+          This study investigates the distributed fact-checking problem, where a series of fact-checkers (agents) with interconnected influence evaluate a sequence of statements from a source. Each statement has a hidden binary label (true or false), and each agent assigns their own label to the statement. The agents' opinions follow a hidden directed chain, with a leader followed by ordered followers. Our goals are to: (i) recover the directed chain (the relative order of agents), and (ii) decode the true label of each statement. We demonstrate that if the source is biased, the directed chain can be recovered through observation of agents' labels. However, an unbiased source allows recovery of only the undirected influence chain. For the latter, we propose two low-complexity algorithms to recover the undirected chain, along with a decoder to estimate the true statement label based on observed agent opinions.
         </div>
         <span class="pub-venue">60th Allerton Conference on Communication, Control and Computing · 2024</span>
       </div>
