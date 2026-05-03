@@ -52,72 +52,61 @@ nav{
 .link-outline{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
 .link-outline:hover{background:var(--accent-lt)}
 
-/* MAIN LAYOUT */
+/* OUTER WRAPPER */
 .outer{max-width:var(--max-w);margin:0 auto;border-top:1px solid var(--border)}
 
-/* ROW 1: sidebar + publications */
-.row1{display:grid;grid-template-columns:280px 1fr;border-bottom:1px solid var(--border)}
-.sidebar{border-right:1px solid var(--border);padding:28px 24px}
-.pub-panel{padding:28px 32px}
-
-/* ROW 2: experience + teaching + skills */
-.row2{display:grid;grid-template-columns:1fr 1fr 1fr}
-.cell{padding:24px 28px;border-right:1px solid var(--border)}
+/* ROW 1: Education | Awards — side by side */
+.row1{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
+.cell{padding:28px 32px;border-right:1px solid var(--border)}
 .cell:last-child{border-right:none}
+
+/* ROW 2: Publications — full width */
+.pub-panel{padding:32px 32px;border-bottom:1px solid var(--border)}
+
+/* ROW 3: Teaching — full width (compact) */
+.teach-panel{padding:24px 32px}
 
 /* SECTION LABELS */
 .sec-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:4px}
 .sec-title{font-family:'Lora',serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:16px}
 
-/* ── EDUCATION (sidebar) ── */
+/* EDUCATION */
 .edu-item{display:flex;align-items:flex-start;gap:9px;padding:8px 0;border-bottom:1px solid var(--border)}
 .edu-item:last-child{border-bottom:none}
 .edu-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:5px}
-.edu-degree{font-weight:600;font-size:.8rem;line-height:1.35;margin-bottom:2px}
+.edu-degree{font-weight:600;font-size:.82rem;line-height:1.35;margin-bottom:2px}
 .edu-meta{display:flex;justify-content:space-between;gap:6px}
-.edu-inst{font-size:.72rem;color:var(--muted)}
-.edu-year{font-size:.7rem;color:var(--accent);font-weight:600;white-space:nowrap}
+.edu-inst{font-size:.73rem;color:var(--muted)}
+.edu-year{font-size:.71rem;color:var(--accent);font-weight:600;white-space:nowrap}
 
-/* ── AWARDS (sidebar) ── */
-.award-item{display:flex;align-items:flex-start;gap:9px;padding:8px 0;border-bottom:1px solid var(--border)}
+/* AWARDS */
+.award-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)}
 .award-item:last-child{border-bottom:none}
 .award-icon{font-size:.95rem;flex-shrink:0;margin-top:1px}
-.award-name{font-weight:600;font-size:.8rem;line-height:1.35;margin-bottom:1px}
-.award-sub{font-size:.71rem;color:var(--muted)}
+.award-name{font-weight:600;font-size:.82rem;line-height:1.35;margin-bottom:1px}
+.award-sub{font-size:.72rem;color:var(--muted)}
 
-.sidebar-divider{border:none;border-top:1px solid var(--border);margin:18px 0}
+/* PUBLICATIONS */
+.pubs-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pub-item{padding:16px 18px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);border-top:2px solid var(--accent)}
+.pub-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px}
+.pub-title{font-weight:600;font-size:.86rem;line-height:1.4;color:var(--text)}
+.pub-year{font-size:.69rem;font-weight:700;color:var(--accent);background:var(--accent-lt);padding:2px 8px;border-radius:999px;white-space:nowrap;margin-top:2px}
+.pub-authors{font-size:.75rem;color:var(--muted);margin-bottom:8px}
+.pub-abstract{font-size:.77rem;color:var(--muted);line-height:1.7;margin-bottom:8px}
+.pub-venue{display:inline-block;font-size:.69rem;font-weight:600;background:var(--accent-lt);color:var(--accent);padding:1px 9px;border-radius:999px}
 
-/* ── PUBLICATIONS ── */
-.pub-item{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid var(--border)}
-.pub-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
-.pub-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:8px}
-.pub-year{font-size:.7rem;font-weight:700;color:var(--accent);background:var(--accent-lt);padding:2px 9px;border-radius:999px;white-space:nowrap;margin-top:2px}
-.pub-title{font-weight:600;font-size:.9rem;line-height:1.4;color:var(--text);margin-bottom:3px}
-.pub-authors{font-size:.76rem;color:var(--muted)}
-.pub-abstract{font-size:.79rem;color:var(--muted);line-height:1.7;margin-top:8px;padding:10px 12px;background:var(--surface);border-left:2px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0}
-.pub-venue{display:inline-block;font-size:.7rem;font-weight:600;background:var(--accent-lt);color:var(--accent);padding:1px 9px;border-radius:999px;margin-top:8px}
-
-/* ── EXPERIENCE ── */
-.exp-item{margin-bottom:18px}
-.exp-item:last-child{margin-bottom:0}
-.exp-row{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
-.exp-role{font-weight:600;font-size:.84rem}
-.exp-date{font-size:.7rem;color:var(--muted);white-space:nowrap}
-.exp-org{font-size:.75rem;color:var(--accent);font-weight:500;margin-bottom:4px}
-.exp-desc{font-size:.77rem;color:var(--muted);line-height:1.6}
-
-/* ── TEACHING ── */
-.teach-item{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid var(--border)}
-.teach-item:last-child{border-bottom:none}
-.teach-course{font-weight:600;font-size:.82rem;margin-bottom:1px}
+/* TEACHING */
+.teach-inner{display:flex;gap:20px;flex-wrap:wrap}
+.teach-item{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:24px;padding:10px 16px;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  flex:1;min-width:260px;
+}
+.teach-course{font-weight:600;font-size:.84rem;margin-bottom:1px}
 .teach-sub{font-size:.73rem;color:var(--muted)}
-.teach-meta{font-size:.71rem;color:var(--muted);text-align:right;white-space:nowrap}
-
-/* ── SKILLS ── */
-.skill-grp-lbl{font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:7px;margin-top:12px}
-.skill-grp-lbl:first-child{margin-top:0}
-.tags{display:flex;flex-wrap:wrap;gap:5px}
-.tag{font-size:.72rem;background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:2px 9px;border-radius:999px}
+.teach-meta{font-size:.72rem;color:var(--muted);text-align:right;white-space:nowrap}
 
 /* FOOTER */
 footer{border-top:1px solid var(--border);background:var(--surface);padding:20px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
@@ -128,19 +117,13 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
 .footer-links a:hover{color:var(--accent)}
 
 /* RESPONSIVE */
-@media(max-width:860px){
+@media(max-width:700px){
   .row1{grid-template-columns:1fr}
-  .sidebar{border-right:none;border-bottom:1px solid var(--border)}
-  .row2{grid-template-columns:1fr 1fr}
-  .cell:nth-child(2){border-right:none}
-  .cell:nth-child(3){border-right:none;border-top:1px solid var(--border);grid-column:1/-1}
-}
-@media(max-width:540px){
+  .cell{border-right:none;border-bottom:1px solid var(--border)}
+  .pubs-grid{grid-template-columns:1fr}
   .hero{grid-template-columns:1fr;text-align:center}
   .hero-photo,.hero-fallback{margin:0 auto}
   .links{justify-content:center}
-  .row2{grid-template-columns:1fr}
-  .cell{border-right:none!important;border-top:1px solid var(--border)}
 }
 </style>
 </head>
@@ -150,10 +133,9 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
 <nav>
   <a class="nav-name" href="#">Alireza Sharbafchi</a>
   <div class="nav-links">
+    <a href="#education">Education</a>
     <a href="#publications">Papers</a>
-    <a href="#experience">Experience</a>
     <a href="#teaching">Teaching</a>
-    <a href="#skills">Skills</a>
   </div>
 </nav>
 
@@ -178,21 +160,18 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
 
 <div class="outer">
 
-  <!-- ROW 1: sidebar (Education + Awards) | Publications -->
-  <div class="row1">
-
-    <!-- SIDEBAR -->
-    <div class="sidebar">
+  <!-- ROW 1: Education | Awards -->
+  <div class="row1" id="education">
+    <div class="cell">
       <div class="sec-label">Academic background</div>
       <div class="sec-title">Education</div>
-
       <div class="edu-item">
         <div class="edu-dot"></div>
         <div style="flex:1">
           <div class="edu-degree">Ph.D. · Industrial &amp; Systems Engineering</div>
           <div class="edu-meta">
-            <span class="edu-inst">Univ. of Minnesota · GPA 3.56</span>
-            <span class="edu-year">2022–now</span>
+            <span class="edu-inst">University of Minnesota · GPA 3.56</span>
+            <span class="edu-year">2022 – present</span>
           </div>
         </div>
       </div>
@@ -201,8 +180,8 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
         <div style="flex:1">
           <div class="edu-degree">M.Sc. · Electrical &amp; Computer Engineering</div>
           <div class="edu-meta">
-            <span class="edu-inst">Univ. of Minnesota · GPA 3.56</span>
-            <span class="edu-year">2022–25</span>
+            <span class="edu-inst">University of Minnesota · GPA 3.56</span>
+            <span class="edu-year">2022 – 2025</span>
           </div>
         </div>
       </div>
@@ -211,124 +190,84 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
         <div style="flex:1">
           <div class="edu-degree">B.Sc. · Electrical &amp; Computer Engineering</div>
           <div class="edu-meta">
-            <span class="edu-inst">Isfahan Univ. of Technology · GPA 3.84</span>
-            <span class="edu-year">2018–22</span>
+            <span class="edu-inst">Isfahan University of Technology · GPA 3.84</span>
+            <span class="edu-year">2018 – 2022</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <hr class="sidebar-divider"/>
-
+    <div class="cell" id="awards">
       <div class="sec-label">Recognition</div>
-      <div class="sec-title" style="margin-bottom:12px">Awards</div>
-
+      <div class="sec-title">Awards &amp; honors</div>
       <div class="award-item">
         <div class="award-icon">🏅</div>
         <div>
           <div class="award-name">Graduate Research Fellowship</div>
-          <div class="award-sub">UMN ECE · 2022</div>
+          <div class="award-sub">UMN Electrical &amp; Computer Engineering · 2022</div>
         </div>
       </div>
       <div class="award-item">
         <div class="award-icon">✈️</div>
         <div>
           <div class="award-name">NSF Travel Award</div>
-          <div class="award-sub">Presented at NASIT 2023</div>
+          <div class="award-sub">To present "Distributed Fact Checking" at the North American School of Information Theory (NASIT) · 2023</div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- PUBLICATIONS -->
-    <div class="pub-panel" id="publications">
-      <div class="sec-label">Research output</div>
-      <div class="sec-title">Selected publications</div>
+  <!-- ROW 2: Publications -->
+  <div class="pub-panel" id="publications">
+    <div class="sec-label">Research output</div>
+    <div class="sec-title">Selected publications</div>
+    <div class="pubs-grid">
 
       <div class="pub-item">
-        <div class="pub-header">
+        <div class="pub-top">
+          <div class="pub-title">Influence Recovery Chain and Application in Distributed Fact-Checking</div>
           <span class="pub-year">2024</span>
-          <div>
-            <div class="pub-title">Influence Recovery Chain and Application in Distributed Fact-Checking</div>
-            <div class="pub-authors"><strong>A. Sharbafchi</strong>, B. Touri, S. Mohajer</div>
-          </div>
         </div>
-        <div class="pub-abstract">
-          This study investigates the distributed fact-checking problem, where a series of fact-checkers (agents) with interconnected influence evaluate a sequence of statements from a source. Each statement has a hidden binary label (true or false), and each agent assigns their own label to the statement. The agents' opinions follow a hidden directed chain, with a leader followed by ordered followers. Our goals are to: (i) recover the directed chain (the relative order of agents), and (ii) decode the true label of each statement. We demonstrate that if the source is biased, the directed chain can be recovered through observation of agents' labels. However, an unbiased source allows recovery of only the undirected influence chain. For the latter, we propose two low-complexity algorithms to recover the undirected chain, along with a decoder to estimate the true statement label based on observed agent opinions.
-        </div>
+        <div class="pub-authors"><strong>A. Sharbafchi</strong>, B. Touri, S. Mohajer</div>
+        <div class="pub-abstract">This study investigates the distributed fact-checking problem, where a series of fact-checkers (agents) with interconnected influence evaluate a sequence of statements from a source. Each statement has a hidden binary label (true or false), and each agent assigns their own label. The agents' opinions follow a hidden directed chain, with a leader followed by ordered followers. Our goals are to: (i) recover the directed chain (the relative order of agents), and (ii) decode the true label of each statement. We demonstrate that if the source is biased, the directed chain can be recovered through observation of agents' labels. However, an unbiased source allows recovery of only the undirected influence chain. For the latter, we propose two low-complexity algorithms to recover the undirected chain, along with a decoder to estimate the true statement label.</div>
         <span class="pub-venue">60th Allerton Conference on Communication, Control and Computing · 2024</span>
       </div>
 
       <div class="pub-item">
-        <div class="pub-header">
+        <div class="pub-top">
+          <div class="pub-title">Distributed Fact-Checking</div>
           <span class="pub-year">2023</span>
-          <div>
-            <div class="pub-title">Distributed Fact-Checking</div>
-            <div class="pub-authors">A. Verma, <strong>A. Sharbafchi</strong>, B. Touri, S. Mohajer</div>
-          </div>
         </div>
-        <div class="pub-abstract">
-          We formulate the problem of fake-news detection using a network of distributed, inexpert agents. Each statement is modeled as drawn from a binary source (true/false), and each agent is treated as a Binary Symmetric Channel that misclassifies statements with some unknown error probability. We derive the optimal aggregation rule — a weighted threshold on agents' labels — and characterize the optimal weights and threshold that minimize the classification error, providing theoretical guarantees on detection performance.
-        </div>
+        <div class="pub-authors">A. Verma, <strong>A. Sharbafchi</strong>, B. Touri, S. Mohajer</div>
+        <div class="pub-abstract">We formulate the problem of fake-news detection using a network of distributed, inexpert agents. Each statement is modeled as drawn from a binary source (true/false), and each agent is treated as a Binary Symmetric Channel that misclassifies statements with some unknown error probability. We derive the optimal aggregation rule — a weighted threshold on agents' labels — and characterize the optimal weights and threshold that minimize classification error, providing theoretical guarantees on detection performance.</div>
         <span class="pub-venue">IEEE International Symposium on Information Theory (ISIT) · 2023 · pp. 2649–2654</span>
       </div>
 
     </div>
   </div>
 
-  <!-- ROW 2: Experience | Teaching | Skills -->
-  <div class="row2">
-
-    <div class="cell" id="experience">
-      <div class="sec-label">Work history</div>
-      <div class="sec-title">Research experience</div>
-      <div class="exp-item">
-        <div class="exp-row">
-          <div class="exp-role">Graduate Researcher</div>
-          <div class="exp-date">2025 – present</div>
-        </div>
-        <div class="exp-org">UMN · Industrial &amp; Systems Engineering</div>
-        <div class="exp-desc">Market design for partially observable service systems; Markov chain modeling of belief dynamics and congestion; Python optimization and simulation tools for optimal signaling policies.</div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-row">
-          <div class="exp-role">Research Assistant (Ph.D.)</div>
-          <div class="exp-date">2022 – 2024</div>
-        </div>
-        <div class="exp-org">UMN · Information and Decision Systems Lab</div>
-        <div class="exp-desc">Graph recovery and parameter estimation in distributed information networks; hierarchical influence graph reconstruction algorithms; published at ISIT 2023 &amp; Allerton 2024.</div>
-      </div>
-    </div>
-
-    <div class="cell" id="teaching">
-      <div class="sec-label">Classroom</div>
-      <div class="sec-title">Teaching</div>
+  <!-- ROW 3: Teaching -->
+  <div class="teach-panel" id="teaching">
+    <div class="sec-label">Classroom</div>
+    <div class="sec-title" style="margin-bottom:14px">Teaching</div>
+    <div class="teach-inner">
       <div class="teach-item">
         <div>
           <div class="teach-course">Communication Systems (EE)</div>
           <div class="teach-sub">University of Minnesota</div>
         </div>
-        <div class="teach-meta">Spring 2026<br/>32 students</div>
+        <div class="teach-meta">Spring 2026 · 32 students</div>
       </div>
       <div class="teach-item">
         <div>
           <div class="teach-course">Machine Learning (EE)</div>
           <div class="teach-sub">University of Minnesota</div>
         </div>
-        <div class="teach-meta">Fall 2025<br/>~100 students</div>
+        <div class="teach-meta">Fall 2025 · ~100 students</div>
       </div>
     </div>
-
-    <div class="cell" id="skills">
-      <div class="sec-label">Toolkit</div>
-      <div class="sec-title">Skills</div>
-      <div class="skill-grp-lbl">Languages</div>
-      <div class="tags"><span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">C/C++</span></div>
-      <div class="skill-grp-lbl">Libraries</div>
-      <div class="tags"><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">scikit-learn</span><span class="tag">PyTorch</span><span class="tag">CVXPY</span><span class="tag">matplotlib</span></div>
-      <div class="skill-grp-lbl">ML &amp; Analytics</div>
-      <div class="tags"><span class="tag">Statistical Inference</span><span class="tag">Feature Engineering</span><span class="tag">Experiment Design</span><span class="tag">Optimization</span></div>
-    </div>
-
   </div>
+
 </div>
 
 <!-- FOOTER -->
