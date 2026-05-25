@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://AlirezaSharbaf.github.io/sitemap.xml
+Sitemap: https://alirezasharbaf.github.io/sitemap.xml
