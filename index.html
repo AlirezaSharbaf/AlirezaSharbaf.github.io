@@ -113,15 +113,13 @@ nav{
 /* OUTER WRAPPER */
 .outer{max-width:var(--max-w);margin:0 auto;border-top:1px solid var(--border)}
 
-/* ROW 1: Education | Awards — side by side */
-.row1{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
-.cell{padding:28px 32px;border-right:1px solid var(--border)}
-.cell:last-child{border-right:none}
+/* SECTION PANELS */
+.section-panel{padding:28px 32px;border-bottom:1px solid var(--border)}
 
-/* ROW 2: Publications — full width */
+/* Publications — full width */
 .pub-panel{padding:32px 32px;border-bottom:1px solid var(--border)}
 
-/* ROW 3: Teaching — full width (compact) */
+/* Teaching — full width (compact) */
 .teach-panel{padding:24px 32px}
 
 /* SECTION LABELS */
@@ -189,8 +187,9 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
 
 /* RESPONSIVE */
 @media(max-width:700px){
-  .row1{grid-template-columns:1fr}
-  .cell{border-right:none;border-bottom:1px solid var(--border)}
+  nav{height:auto;flex-direction:column;align-items:flex-start;gap:7px;padding:9px 5%}
+  .nav-links{width:100%;flex-wrap:wrap;gap:4px 12px}
+  .nav-links a{font-size:.72rem}
   .pubs-grid{grid-template-columns:1fr}
   .exp-item{gap:10px;padding:14px 12px}
   .exp-logo-wrap{flex-basis:92px}
@@ -211,6 +210,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
   <div class="nav-links">
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
+    <a href="#awards">Awards</a>
     <a href="#publications">Papers</a>
     <a href="#teaching">Teaching</a>
   </div>
@@ -250,64 +250,43 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
 
 <div class="outer">
 
-  <!-- ROW 1: Education | Awards -->
-  <div class="row1" id="education">
-    <div class="cell">
-      <div class="sec-label">Academic background</div>
-      <div class="sec-title">Education</div>
-      <div class="edu-item">
-        <div class="edu-dot"></div>
-        <div style="flex:1">
-          <div class="edu-degree">Ph.D. · Industrial &amp; Systems Engineering</div>
-          <div class="edu-meta">
-            <span class="edu-inst"><img class="edu-logo" src="assets/umn-logo.svg" alt="University of Minnesota logo"/>University of Minnesota · GPA 3.56</span>
-            <span class="edu-year">2022 – present</span>
-          </div>
-        </div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-dot"></div>
-        <div style="flex:1">
-          <div class="edu-degree">M.Sc. · Electrical &amp; Computer Engineering</div>
-          <div class="edu-meta">
-            <span class="edu-inst"><img class="edu-logo" src="assets/umn-logo.svg" alt="University of Minnesota logo"/>University of Minnesota · GPA 3.56</span>
-            <span class="edu-year">2022 – 2025</span>
-          </div>
-        </div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-dot"></div>
-        <div style="flex:1">
-          <div class="edu-degree">B.Sc. · Electrical &amp; Computer Engineering</div>
-          <div class="edu-meta">
-            <span class="edu-inst">Isfahan University of Technology · GPA 3.84</span>
-            <span class="edu-year">2018 – 2022</span>
-          </div>
+  <!-- Education -->
+  <div class="section-panel" id="education">
+    <div class="sec-label">Academic background</div>
+    <div class="sec-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-dot"></div>
+      <div style="flex:1">
+        <div class="edu-degree">Ph.D. · Industrial &amp; Systems Engineering</div>
+        <div class="edu-meta">
+          <span class="edu-inst"><img class="edu-logo" src="assets/umn-logo.svg" alt="University of Minnesota logo"/>University of Minnesota · GPA 3.56</span>
+          <span class="edu-year">2022 – present</span>
         </div>
       </div>
     </div>
-
-    <div class="cell" id="awards">
-      <div class="sec-label">Recognition</div>
-      <div class="sec-title">Awards &amp; honors</div>
-      <div class="award-item">
-        <div class="award-icon">🏅</div>
-        <div>
-          <div class="award-name">Graduate Research Fellowship</div>
-          <div class="award-sub">UMN Electrical &amp; Computer Engineering · 2022</div>
+    <div class="edu-item">
+      <div class="edu-dot"></div>
+      <div style="flex:1">
+        <div class="edu-degree">M.Sc. · Electrical &amp; Computer Engineering</div>
+        <div class="edu-meta">
+          <span class="edu-inst"><img class="edu-logo" src="assets/umn-logo.svg" alt="University of Minnesota logo"/>University of Minnesota · GPA 3.56</span>
+          <span class="edu-year">2022 – 2025</span>
         </div>
       </div>
-      <div class="award-item">
-        <div class="award-icon">✈️</div>
-        <div>
-          <div class="award-name">NSF Travel Award</div>
-          <div class="award-sub">To present "Distributed Fact Checking" at the North American School of Information Theory (NASIT) · 2023</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-dot"></div>
+      <div style="flex:1">
+        <div class="edu-degree">B.Sc. · Electrical &amp; Computer Engineering</div>
+        <div class="edu-meta">
+          <span class="edu-inst">Isfahan University of Technology · GPA 3.84</span>
+          <span class="edu-year">2018 – 2022</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ROW 2: Experience -->
+  <!-- Experience -->
   <div class="exp-panel" id="experience">
     <div class="sec-label">Professional work</div>
     <div class="sec-title">Experience</div>
@@ -328,7 +307,27 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
     </div>
   </div>
 
-  <!-- ROW 3: Publications -->
+  <!-- Awards -->
+  <div class="section-panel" id="awards">
+    <div class="sec-label">Recognition</div>
+    <div class="sec-title">Awards &amp; honors</div>
+    <div class="award-item">
+      <div class="award-icon">🏅</div>
+      <div>
+        <div class="award-name">Graduate Research Fellowship</div>
+        <div class="award-sub">UMN Electrical &amp; Computer Engineering · 2022</div>
+      </div>
+    </div>
+    <div class="award-item">
+      <div class="award-icon">✈️</div>
+      <div>
+        <div class="award-name">NSF Travel Award</div>
+        <div class="award-sub">To present "Distributed Fact Checking" at the North American School of Information Theory (NASIT) · 2023</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Publications -->
   <div class="pub-panel" id="publications">
     <div class="sec-label">Research output</div>
     <div class="sec-title">Selected publications</div>
@@ -357,7 +356,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
     </div>
   </div>
 
-  <!-- ROW 4: Teaching -->
+  <!-- Teaching -->
   <div class="teach-panel" id="teaching">
     <div class="sec-label">Classroom</div>
     <div class="sec-title" style="margin-bottom:14px">Teaching</div>
