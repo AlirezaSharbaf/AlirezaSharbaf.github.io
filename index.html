@@ -156,26 +156,23 @@ nav{
 .exp-date{font-size:.72rem;color:var(--muted);white-space:nowrap}
 
 /* PUBLICATIONS */
-.pubs-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.pub-item{padding:16px 18px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);border-top:2px solid var(--accent)}
-.pub-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px}
-.pub-title{font-weight:600;font-size:.86rem;line-height:1.4;color:var(--text)}
-.pub-year{font-size:.69rem;font-weight:700;color:var(--accent);background:var(--accent-lt);padding:2px 8px;border-radius:999px;white-space:nowrap;margin-top:2px}
-.pub-authors{font-size:.75rem;color:var(--muted);margin-bottom:8px}
-.pub-abstract{font-size:.77rem;color:var(--muted);line-height:1.7;margin-bottom:8px}
-.pub-venue{display:inline-block;font-size:.69rem;font-weight:600;background:var(--accent-lt);color:var(--accent);padding:1px 9px;border-radius:999px}
+.pubs-list{list-style:none;display:grid;gap:16px}
+.pub-item{display:grid;grid-template-columns:62px 1fr;gap:14px;padding:0 0 16px;border-bottom:1px solid var(--border)}
+.pub-item:last-child{padding-bottom:0;border-bottom:none}
+.pub-year{font-size:.72rem;font-weight:700;color:var(--accent);line-height:1.4;padding-top:2px}
+.pub-title{font-weight:600;font-size:.88rem;line-height:1.4;color:var(--text);margin-bottom:3px}
+.pub-authors{font-size:.75rem;color:var(--muted);margin-bottom:3px}
+.pub-venue{font-size:.72rem;font-weight:600;color:var(--accent);margin-bottom:6px}
+.pub-abstract{font-size:.76rem;color:var(--muted);line-height:1.65}
 
 /* TEACHING */
-.teach-inner{display:flex;gap:20px;flex-wrap:wrap}
-.teach-item{
-  display:flex;justify-content:space-between;align-items:center;
-  gap:24px;padding:10px 16px;
-  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-  flex:1;min-width:260px;
-}
-.teach-course{font-weight:600;font-size:.84rem;margin-bottom:1px}
-.teach-sub{font-size:.73rem;color:var(--muted)}
-.teach-meta{font-size:.72rem;color:var(--muted);text-align:right;white-space:nowrap}
+.teach-list{list-style:none;display:grid;gap:14px}
+.teach-item{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:0 0 14px;border-bottom:1px solid var(--border)}
+.teach-item:last-child{padding-bottom:0;border-bottom:none}
+.teach-term{font-size:.72rem;font-weight:700;color:var(--accent);line-height:1.4;padding-top:2px}
+.teach-course{font-weight:600;font-size:.84rem;line-height:1.4;margin-bottom:2px}
+.teach-sub{font-size:.73rem;color:var(--muted);margin-bottom:2px}
+.teach-meta{font-size:.72rem;color:var(--muted)}
 
 /* FOOTER */
 footer{border-top:1px solid var(--border);background:var(--surface);padding:20px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
@@ -190,7 +187,10 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
   nav{height:auto;flex-direction:column;align-items:flex-start;gap:7px;padding:9px 5%}
   .nav-links{width:100%;flex-wrap:wrap;gap:4px 12px}
   .nav-links a{font-size:.72rem}
-  .pubs-grid{grid-template-columns:1fr}
+  .pub-item{grid-template-columns:1fr;gap:4px}
+  .pub-year{padding-top:0}
+  .teach-item{grid-template-columns:1fr;gap:4px}
+  .teach-term{padding-top:0}
   .exp-item{gap:10px;padding:14px 12px}
   .exp-logo-wrap{flex-basis:92px}
   .exp-logo{width:92px}
@@ -331,51 +331,53 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
   <div class="pub-panel" id="publications">
     <div class="sec-label">Research output</div>
     <div class="sec-title">Selected publications</div>
-    <div class="pubs-grid">
+    <ol class="pubs-list">
 
-      <div class="pub-item">
-        <div class="pub-top">
+      <li class="pub-item">
+        <div class="pub-year">2024</div>
+        <div class="pub-main">
           <div class="pub-title">Influence Recovery Chain and Application in Distributed Fact-Checking</div>
-          <span class="pub-year">2024</span>
+          <div class="pub-authors"><strong>A. Sharbafchi</strong>, B. Touri, S. Mohajer</div>
+          <div class="pub-venue">60th Allerton Conference on Communication, Control and Computing · 2024</div>
+          <div class="pub-abstract">This study investigates the distributed fact-checking problem, where a series of fact-checkers (agents) with interconnected influence evaluate a sequence of statements from a source. Each statement has a hidden binary label (true or false), and each agent assigns their own label. The agents' opinions follow a hidden directed chain, with a leader followed by ordered followers. Our goals are to: (i) recover the directed chain (the relative order of agents), and (ii) decode the true label of each statement. We demonstrate that if the source is biased, the directed chain can be recovered through observation of agents' labels. However, an unbiased source allows recovery of only the undirected influence chain. For the latter, we propose two low-complexity algorithms to recover the undirected chain, along with a decoder to estimate the true statement label.</div>
         </div>
-        <div class="pub-authors"><strong>A. Sharbafchi</strong>, B. Touri, S. Mohajer</div>
-        <div class="pub-abstract">This study investigates the distributed fact-checking problem, where a series of fact-checkers (agents) with interconnected influence evaluate a sequence of statements from a source. Each statement has a hidden binary label (true or false), and each agent assigns their own label. The agents' opinions follow a hidden directed chain, with a leader followed by ordered followers. Our goals are to: (i) recover the directed chain (the relative order of agents), and (ii) decode the true label of each statement. We demonstrate that if the source is biased, the directed chain can be recovered through observation of agents' labels. However, an unbiased source allows recovery of only the undirected influence chain. For the latter, we propose two low-complexity algorithms to recover the undirected chain, along with a decoder to estimate the true statement label.</div>
-        <span class="pub-venue">60th Allerton Conference on Communication, Control and Computing · 2024</span>
-      </div>
+      </li>
 
-      <div class="pub-item">
-        <div class="pub-top">
+      <li class="pub-item">
+        <div class="pub-year">2023</div>
+        <div class="pub-main">
           <div class="pub-title">Distributed Fact-Checking</div>
-          <span class="pub-year">2023</span>
+          <div class="pub-authors">A. Verma, <strong>A. Sharbafchi</strong>, B. Touri, S. Mohajer</div>
+          <div class="pub-venue">IEEE International Symposium on Information Theory (ISIT) · 2023 · pp. 2649–2654</div>
+          <div class="pub-abstract">We formulate the problem of fake-news detection using a network of distributed, inexpert agents. Each statement is modeled as drawn from a binary source (true/false), and each agent is treated as a Binary Symmetric Channel that misclassifies statements with some unknown error probability. We derive the optimal aggregation rule — a weighted threshold on agents' labels — and characterize the optimal weights and threshold that minimize classification error, providing theoretical guarantees on detection performance.</div>
         </div>
-        <div class="pub-authors">A. Verma, <strong>A. Sharbafchi</strong>, B. Touri, S. Mohajer</div>
-        <div class="pub-abstract">We formulate the problem of fake-news detection using a network of distributed, inexpert agents. Each statement is modeled as drawn from a binary source (true/false), and each agent is treated as a Binary Symmetric Channel that misclassifies statements with some unknown error probability. We derive the optimal aggregation rule — a weighted threshold on agents' labels — and characterize the optimal weights and threshold that minimize classification error, providing theoretical guarantees on detection performance.</div>
-        <span class="pub-venue">IEEE International Symposium on Information Theory (ISIT) · 2023 · pp. 2649–2654</span>
-      </div>
+      </li>
 
-    </div>
+    </ol>
   </div>
 
   <!-- Teaching -->
   <div class="teach-panel" id="teaching">
     <div class="sec-label">Classroom</div>
     <div class="sec-title" style="margin-bottom:14px">Teaching</div>
-    <div class="teach-inner">
-      <div class="teach-item">
-        <div>
+    <ol class="teach-list">
+      <li class="teach-item">
+        <div class="teach-term">Spring 2026</div>
+        <div class="teach-main">
           <div class="teach-course">Communication Systems (EE)</div>
           <div class="teach-sub">University of Minnesota</div>
+          <div class="teach-meta">32 students</div>
         </div>
-        <div class="teach-meta">Spring 2026 · 32 students</div>
-      </div>
-      <div class="teach-item">
-        <div>
+      </li>
+      <li class="teach-item">
+        <div class="teach-term">Fall 2025</div>
+        <div class="teach-main">
           <div class="teach-course">Machine Learning (EE)</div>
           <div class="teach-sub">University of Minnesota</div>
+          <div class="teach-meta">~100 students</div>
         </div>
-        <div class="teach-meta">Fall 2025 · ~100 students</div>
-      </div>
-    </div>
+      </li>
+    </ol>
   </div>
 
 </div>
