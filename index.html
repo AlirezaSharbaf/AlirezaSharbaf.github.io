@@ -12,13 +12,13 @@
   gtag('config', 'G-JD268DM8Z5');
 </script>
 <title>Alireza Sharbafchi — Ph.D. Student, Industrial & Systems Engineering, University of Minnesota</title>
-<meta name="description" content="Alireza Sharbafchi is a Ph.D. student in Industrial & Systems Engineering at the University of Minnesota. Research in stochastic modeling, queueing systems, and mechanism design. Published at IEEE ISIT and Allerton Conference."/>
-<meta name="keywords" content="Alireza Sharbafchi, University of Minnesota, Industrial Systems Engineering, stochastic modeling, queueing, mechanism design, IEEE ISIT, Allerton"/>
+<meta name="description" content="Alireza Sharbafchi studies operations research at the University of Minnesota and collaborates with MD Anderson Cancer Center on operating room scheduling. His research also covers queue monitoring and distributed fact-checking."/>
+<meta name="keywords" content="Alireza Sharbafchi, University of Minnesota, MD Anderson, operations research, surgical scheduling, discrete-event simulation, queueing, information design, distributed fact-checking"/>
 <meta name="author" content="Alireza Sharbafchi"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <meta name="googlebot" content="index, follow"/>
 <meta property="og:title" content="Alireza Sharbafchi — Ph.D. Student, University of Minnesota"/>
-<meta property="og:description" content="Ph.D. student in Industrial & Systems Engineering at UMN. Research in stochastic modeling, queueing systems, and mechanism design."/>
+<meta property="og:description" content="Alireza Sharbafchi studies operations research at the University of Minnesota and collaborates with MD Anderson Cancer Center on operating room scheduling. His research also covers queue monitoring and distributed fact-checking."/>
 <meta property="og:url" content="https://alirezasharbaf.github.io/"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Alireza Sharbafchi"/>
@@ -26,7 +26,7 @@
 <meta property="og:image:alt" content="Alireza Sharbafchi"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Alireza Sharbafchi — Ph.D. Student, University of Minnesota"/>
-<meta name="twitter:description" content="Research in stochastic modeling, queueing systems, and mechanism design."/>
+<meta name="twitter:description" content="Alireza Sharbafchi studies operations research at the University of Minnesota and collaborates with MD Anderson Cancer Center on operating room scheduling. His research also covers queue monitoring and distributed fact-checking."/>
 <meta name="twitter:image" content="https://alirezasharbaf.github.io/assets/headshot-2026.jpeg"/>
 <link rel="canonical" href="https://alirezasharbaf.github.io/"/>
 <meta name="google-site-verification" content="Sx9WPdq8LfvZd325GRl5zDQa84C2UrjY2XmZ5Cj0ZqY" />
@@ -64,7 +64,10 @@
   "knowsAbout": [
     "Stochastic modeling",
     "Queueing systems",
-    "Mechanism design",
+    "Information design",
+    "Operations research",
+    "Surgical scheduling",
+    "Discrete-event simulation",
     "Distributed fact-checking"
   ]
 }
@@ -137,7 +140,6 @@ nav{
 .teach-panel{padding:24px 32px}
 
 /* SECTION LABELS */
-.sec-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:4px}
 .sec-title{font-family:'Lora',serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:16px}
 
 /* EDUCATION */
@@ -178,6 +180,17 @@ nav{
 .pub-authors{font-size:.75rem;color:var(--muted);margin-bottom:3px}
 .pub-venue{font-size:.72rem;font-weight:600;color:var(--accent);margin-bottom:6px}
 
+/* Projects and experience details */
+.outer [id]{scroll-margin-top:64px}
+.exp-body{flex:1;min-width:0}
+.exp-logo-umn{width:48px}
+.invited-talk,.methods-tools,.project p,.project li{font-size:.85rem;line-height:1.7}
+.invited-talk,.methods-tools{margin-top:16px}
+.project + .project{border-top:1px solid var(--border);margin-top:16px;padding-top:16px}
+.project h3{font-size:.92rem;margin-bottom:4px}
+.project ul{padding-left:1.25rem;margin-top:5px}
+.project li + li{margin-top:4px}
+
 /* TEACHING */
 .teach-list{list-style:none;display:grid;gap:14px}
 .teach-item{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:0 0 14px;border-bottom:1px solid var(--border)}
@@ -200,6 +213,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
   nav{height:auto;flex-direction:column;align-items:flex-start;gap:7px;padding:9px 5%}
   .nav-links{width:100%;flex-wrap:wrap;gap:4px 12px}
   .nav-links a{font-size:.72rem}
+  .outer [id]{scroll-margin-top:100px}
   .outer{gap:12px;padding-bottom:28px}
   .section-panel,.exp-panel,.pub-panel,.teach-panel{padding:22px 18px}
   .pub-item{grid-template-columns:1fr;gap:4px}
@@ -209,6 +223,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
   .exp-item{gap:10px;padding:14px 12px}
   .exp-logo-wrap{flex-basis:92px}
   .exp-logo{width:92px}
+  .exp-logo-umn{width:38px}
   .exp-top{display:block}
   .exp-date{margin-top:2px}
   .hero{grid-template-columns:1fr;text-align:center}
@@ -225,9 +240,10 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
   <div class="nav-links">
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
-    <a href="#awards">Awards</a>
-    <a href="#publications">Papers</a>
+    <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
     <a href="#teaching">Teaching</a>
+    <a href="#awards">Awards</a>
   </div>
 </nav>
 
@@ -236,7 +252,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
   <div>
     <div class="hero-tag">Ph.D. Student · University of Minnesota</div>
     <h1>Alireza Sharbafchi</h1>
-    <p class="hero-bio">I am a Ph.D. student in the Department of Industrial &amp; Systems Engineering at the University of Minnesota. My research focuses on stochastic modeling, queueing systems, and mechanism design, combining analytical theory with Python-based optimization tools to study decision-making under uncertainty. I have published my work at leading venues including IEEE ISIT and the Allerton Conference.</p>
+    <p class="hero-bio">I’m a Ph.D. student in Industrial and Systems Engineering at the University of Minnesota Twin Cities. I study how to make decisions with incomplete information, from when to update a queue length to how to reschedule a surgery. At MD Anderson Cancer Center, I use simulation to test how changes to the operating room schedule affect patients and surgical teams.</p>
     <div class="links">
       <a class="link-btn link-primary" href="mailto:sharb019@umn.edu">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -267,24 +283,23 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
 
   <!-- Education -->
   <div class="section-panel" id="education">
-    <div class="sec-label">Academic background</div>
-    <div class="sec-title">Education</div>
+    <h2 class="sec-title">Education</h2>
     <div class="edu-item">
       <div class="edu-dot"></div>
       <div style="flex:1">
-        <div class="edu-degree">Ph.D. · Industrial &amp; Systems Engineering</div>
+        <div class="edu-degree">Ph.D. student, Industrial and Systems Engineering</div>
         <div class="edu-meta">
-          <span class="edu-inst"><img class="edu-logo" src="assets/umn-logo.svg" alt="University of Minnesota logo"/>University of Minnesota · GPA 3.56</span>
-          <span class="edu-year">2022 – present</span>
+          <span class="edu-inst"><img class="edu-logo" src="assets/umn-logo.svg" alt="University of Minnesota logo"/>University of Minnesota Twin Cities</span>
+          <span class="edu-year">2025 – present</span>
         </div>
       </div>
     </div>
     <div class="edu-item">
       <div class="edu-dot"></div>
       <div style="flex:1">
-        <div class="edu-degree">M.Sc. · Electrical &amp; Computer Engineering</div>
+        <div class="edu-degree">M.S., Electrical and Computer Engineering</div>
         <div class="edu-meta">
-          <span class="edu-inst"><img class="edu-logo" src="assets/umn-logo.svg" alt="University of Minnesota logo"/>University of Minnesota · GPA 3.56</span>
+          <span class="edu-inst"><img class="edu-logo" src="assets/umn-logo.svg" alt="University of Minnesota logo"/>University of Minnesota Twin Cities · GPA 3.56</span>
           <span class="edu-year">2022 – 2025</span>
         </div>
       </div>
@@ -292,7 +307,7 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
     <div class="edu-item">
       <div class="edu-dot"></div>
       <div style="flex:1">
-        <div class="edu-degree">B.Sc. · Electrical &amp; Computer Engineering</div>
+        <div class="edu-degree">B.S., Electrical Engineering (Communications)</div>
         <div class="edu-meta">
           <span class="edu-inst"><img class="edu-logo" src="assets/iut-logo.svg" alt="Isfahan University of Technology logo"/>Isfahan University of Technology · GPA 3.84</span>
           <span class="edu-year">2018 – 2022</span>
@@ -302,51 +317,58 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
   </div>
 
   <!-- Experience -->
-  <div class="exp-panel" id="experience">
-    <div class="sec-label">Professional work</div>
-    <div class="sec-title">Experience</div>
+  <section class="exp-panel" id="experience">
+    <h2 class="sec-title">Experience</h2>
     <div class="exp-list">
-      <div class="exp-item">
-        <div class="exp-logo-wrap">
-          <img class="exp-logo" src="assets/md-anderson-logo.png" alt="UT MD Anderson logo"/>
+      <article class="exp-item">
+        <div class="exp-logo-wrap"><img class="exp-logo" src="assets/md-anderson-logo.png" alt=""/></div>
+        <div class="exp-body">
+          <div class="exp-top"><h3 class="exp-role">Research Collaborator, Imaging Physics</h3><span class="exp-date">September 2026 – present</span></div>
+          <div class="exp-org">The University of Texas MD Anderson Cancer Center</div>
+          <p class="exp-desc">I compare ways to move or swap surgical cases as delays arise during the day.</p>
         </div>
-        <div style="flex:1">
-          <div class="exp-top">
-            <div class="exp-role">Graduate Research Intern · Optimization &amp; Data Science</div>
-            <div class="exp-date">June 2026 – August 2026</div>
-          </div>
-          <div class="exp-org">The University of Texas MD Anderson Cancer Center · Department of Imaging Physics</div>
-          <div class="exp-desc">Conducting summer research at MD Anderson on optimization, simulation, and data-driven methods to improve cancer care workflows.</div>
+      </article>
+      <article class="exp-item">
+        <div class="exp-logo-wrap"><img class="exp-logo" src="assets/md-anderson-logo.png" alt=""/></div>
+        <div class="exp-body">
+          <div class="exp-top"><h3 class="exp-role">Graduate Research Intern, Imaging Physics</h3><span class="exp-date">June – August 2026</span></div>
+          <div class="exp-org">The University of Texas MD Anderson Cancer Center</div>
+          <p class="exp-desc">I modeled patient flow from preoperative care through recovery at two surgical facilities.</p>
         </div>
-      </div>
+      </article>
+      <article class="exp-item">
+        <div class="exp-logo-wrap"><img class="exp-logo exp-logo-umn" src="assets/umn-logo.svg" alt=""/></div>
+        <div class="exp-body">
+          <div class="exp-top"><h3 class="exp-role">Graduate Researcher, Stochastic Modeling and Information Design</h3><span class="exp-date">2025 – present</span></div>
+          <div class="exp-org">University of Minnesota Twin Cities</div>
+          <p class="exp-desc">I study when a service provider should observe a queue and share its length with customers deciding whether to join.</p>
+        </div>
+      </article>
+      <article class="exp-item">
+        <div class="exp-logo-wrap"><img class="exp-logo exp-logo-umn" src="assets/umn-logo.svg" alt=""/></div>
+        <div class="exp-body">
+          <div class="exp-top"><h3 class="exp-role">Research Assistant, Information and Decision Systems Lab</h3><span class="exp-date">2022 – 2024</span></div>
+          <div class="exp-org">University of Minnesota Twin Cities</div>
+          <p class="exp-desc">I developed algorithms to infer which sources influence one another in networks used for fact-checking.</p>
+        </div>
+      </article>
     </div>
-  </div>
-
-  <!-- Awards -->
-  <div class="section-panel" id="awards">
-    <div class="sec-label">Recognition</div>
-    <div class="sec-title">Awards &amp; honors</div>
-    <div class="award-item">
-      <div class="award-icon">🏅</div>
-      <div>
-        <div class="award-name">Graduate Research Fellowship</div>
-        <div class="award-sub">UMN Electrical &amp; Computer Engineering · 2022</div>
-      </div>
-    </div>
-    <div class="award-item">
-      <div class="award-icon">✈️</div>
-      <div>
-        <div class="award-name">NSF Travel Award</div>
-        <div class="award-sub">To present "Distributed Fact Checking" at the North American School of Information Theory (NASIT) · 2023</div>
-      </div>
-    </div>
-  </div>
+    <p class="invited-talk"><strong>Invited talk.</strong> “Operations Research in Healthcare,” INFORMS Student Chapter, University of Minnesota, November 2026.</p>
+  </section>
 
   <!-- Publications -->
   <div class="pub-panel" id="publications">
-    <div class="sec-label">Research output</div>
-    <div class="sec-title">Selected publications</div>
+    <h2 class="sec-title">Selected publications</h2>
     <ol class="pubs-list">
+      <li class="pub-item">
+        <div class="pub-year">2027</div>
+        <div class="pub-main">
+          <div class="pub-title">Surgical Schedule Optimization and Digital Twinning of Multi-OR Operations</div>
+          <div class="pub-authors"><strong>A. Sharbafchi</strong>, N. Mirzavand Boroujeni, K. Owens, M. Clemens, J. H. Siewerdsen</div>
+          <div class="pub-venue">SPIE Medical Imaging 2027 · Accepted for oral presentation</div>
+        </div>
+      </li>
+
 
       <li class="pub-item">
         <div class="pub-year">2024</div>
@@ -369,15 +391,36 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
     </ol>
   </div>
 
+  <section class="section-panel" id="projects">
+    <h2 class="sec-title">Project descriptions</h2>
+    <article class="project">
+      <h3>Operating room rescheduling</h3>
+      <p>I used data from 21,007 surgeries at two MD Anderson facilities to model patient flow. When a case runs late, the scheduling policy simulates moving or swapping cases across rooms before deciding whether to change the schedule.</p>
+      <ul>
+        <li>Across 350 paired simulations of 10 busy surgical days, rescheduling reduced operating room use after 7 p.m. by <strong>1.75 room-hours per day on average</strong> compared with keeping the original schedule.</li>
+        <li>In a separate study of 200 paired outpatient simulations, four cases ran 40% over schedule. Rescheduling finished the surgical day <strong>16.9 minutes earlier on average</strong> than keeping the original schedule.</li>
+      </ul>
+    </article>
+    <article class="project">
+      <h3>Queue monitoring and customer admissions</h3>
+      <p>Customers use the last reported queue length to decide whether to join. I formulated a dynamic program to choose when to update that report, solved the two-state case, and compared four policies across 150 scenarios in Python. With cost-free monitoring, timed updates yielded <strong>up to 34.9% higher modeled throughput</strong> than continuously disclosing the queue length.</p>
+    </article>
+    <article class="project">
+      <h3>Distributed fact-checking</h3>
+      <p>Sources can agree because they influence one another. I developed three algorithms to reconstruct those relationships for distributed fact-checking.</p>
+    </article>
+    <p class="methods-tools"><strong>Methods</strong> Discrete-event simulation, stochastic optimization, dynamic programming, Markov chains.<br/>
+      <strong>Tools</strong> Python (NumPy, SciPy, pandas, scikit-learn, PyTorch), CVXPY, Simio, MATLAB, C/C++.</p>
+  </section>
+
   <!-- Teaching -->
   <div class="teach-panel" id="teaching">
-    <div class="sec-label">Classroom</div>
-    <div class="sec-title" style="margin-bottom:14px">Teaching</div>
+    <h2 class="sec-title">Teaching</h2>
     <ol class="teach-list">
       <li class="teach-item">
         <div class="teach-term">Spring 2026</div>
         <div class="teach-main">
-          <div class="teach-course">Communication Systems (EE)</div>
+          <div class="teach-course">Teaching Assistant, Communication Systems</div>
           <div class="teach-sub">University of Minnesota</div>
           <div class="teach-meta">32 students</div>
         </div>
@@ -385,12 +428,31 @@ footer{border-top:1px solid var(--border);background:var(--surface);padding:20px
       <li class="teach-item">
         <div class="teach-term">Fall 2025</div>
         <div class="teach-main">
-          <div class="teach-course">Machine Learning (EE)</div>
+          <div class="teach-course">Teaching Assistant, Machine Learning</div>
           <div class="teach-sub">University of Minnesota</div>
           <div class="teach-meta">~100 students</div>
         </div>
       </li>
     </ol>
+  </div>
+
+  <!-- Awards -->
+  <div class="section-panel" id="awards">
+    <h2 class="sec-title">Awards &amp; honors</h2>
+    <div class="award-item">
+      <div class="award-icon">🏅</div>
+      <div>
+        <div class="award-name">Graduate Research Fellowship</div>
+        <div class="award-sub">UMN Electrical &amp; Computer Engineering · 2022</div>
+      </div>
+    </div>
+    <div class="award-item">
+      <div class="award-icon">✈️</div>
+      <div>
+        <div class="award-name">NSF Travel Award</div>
+        <div class="award-sub">To present "Distributed Fact Checking" at the North American School of Information Theory (NASIT) · 2023</div>
+      </div>
+    </div>
   </div>
 
 </div>
