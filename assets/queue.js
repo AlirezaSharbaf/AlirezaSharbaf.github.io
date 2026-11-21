@@ -4,6 +4,8 @@ const elapsedValue = document.querySelector("#elapsed-value");
 const probability = document.querySelector("#busy-probability");
 const bar = document.querySelector("#prob-bar");
 const note = document.querySelector("#queue-note");
+const point = document.querySelector("#curve-point");
+const cursor = document.querySelector("#curve-line");
 
 function showBelief() {
   const state = controls.querySelector("input[name='last-state']:checked").value;
@@ -17,6 +19,13 @@ function showBelief() {
   elapsed.setAttribute("aria-valuetext", interval);
   probability.textContent = percent.toFixed(1) + "%";
   bar.style.width = percent + "%";
+  // Match the plot's axes, including their margins and small vertical padding.
+  const xPosition = (0.132 + (0.978 - 0.132) * time / 3) * 100 + "%";
+  const yPosition = (0.10 + 0.66 * (1.04 - percent / 100) / 1.08) * 100 + "%";
+  point.style.left = cursor.style.left = xPosition;
+  point.style.top = yPosition;
+  point.dataset.state = state;
+  point.hidden = cursor.hidden = false;
   note.textContent = time === 0
     ? "A fresh report shows the server is " + state + "."
     : "The server was " + state + " " + interval + " ago.";

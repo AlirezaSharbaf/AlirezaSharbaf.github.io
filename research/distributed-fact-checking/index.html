@@ -18,12 +18,12 @@
   <meta property="og:title" content="Learning from networks of fact-checkers | Alireza Sharbafchi">
   <meta property="og:description" content="Research on estimating reviewer reliability, combining votes, and reconstructing chains of influence in distributed fact-checking.">
   <meta property="og:url" content="https://alirezasharbaf.github.io/research/distributed-fact-checking/">
-  <meta property="og:image" content="https://alirezasharbaf.github.io/assets/headshot-tmc3.jpg">
+  <meta property="og:image" content="https://alirezasharbaf.github.io/assets/headshot-2026.jpeg">
   <meta property="og:image:alt" content="Alireza Sharbafchi">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Learning from networks of fact-checkers | Alireza Sharbafchi">
   <meta name="twitter:description" content="Research on estimating reviewer reliability, combining votes, and reconstructing chains of influence in distributed fact-checking.">
-  <meta name="twitter:image" content="https://alirezasharbaf.github.io/assets/headshot-tmc3.jpg">
+  <meta name="twitter:image" content="https://alirezasharbaf.github.io/assets/headshot-2026.jpeg">
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
@@ -35,7 +35,7 @@
     "@id": "https://alirezasharbaf.github.io/#person",
     "name": "Alireza Sharbafchi",
     "url": "https://alirezasharbaf.github.io/",
-    "image": "https://alirezasharbaf.github.io/assets/headshot-tmc3.jpg",
+    "image": "https://alirezasharbaf.github.io/assets/headshot-2026.jpeg",
     "email": "mailto:sharb019@umn.edu",
     "jobTitle": "Ph.D. student in Industrial and Systems Engineering",
     "affiliation": {
@@ -75,7 +75,7 @@
     gtag('js', new Date());
     gtag('config', 'G-JD268DM8Z5');
   </script>
-  
+<script src="../../assets/votes.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -104,9 +104,29 @@
       <section id="independent"><h2>Combining independent votes</h2>
         <p>In the first model, reviewers label statements true or false. Their errors are independent given the truth, but reviewers differ in reliability. We derived the optimal rule for weighting their votes when error rates are known and bounded its probability of error.</p>
         <p>In practice, the reviewer error rates may themselves be unknown. We developed an online method that estimates reliability from the votes. In simulation, its decisions agreed with the classifier that knew the error rates on <strong>9,983 of 10,000 statements</strong>.</p>
+        <figure class="illustration vote-figure">
+          <figcaption><span class="eyebrow">Illustrative votes</span><span class="figure-title">Can one reviewer outweigh two?</span></figcaption>
+          <p class="figure-intro">A and B vote true. C votes false. Keep all three votes fixed and change how often C gets the answer right.</p>
+          <div class="vote-rows">
+            <div><span>Reviewer A</span><strong>Votes true</strong><span>60% accurate</span></div>
+            <div><span>Reviewer B</span><strong>Votes true</strong><span>60% accurate</span></div>
+            <div><span>Reviewer C</span><strong>Votes false</strong><span id="reviewer-accuracy">60% accurate</span></div>
+          </div>
+          <fieldset class="figure-options" id="vote-controls" hidden><legend>Reviewer C’s accuracy</legend><div class="segmented">
+            <label><input type="radio" name="reviewer-c" value="0.6" checked><span>60%</span></label>
+            <label><input type="radio" name="reviewer-c" value="0.9"><span>90%</span></label>
+          </div></fieldset>
+          <div class="readout" role="status"><div><span>Reliability-weighted verdict</span><strong id="vote-verdict">True</strong></div><p id="vote-reason">With equally reliable reviewers, the two true votes carry the decision. The probability the claim is true is 60%.</p></div>
+          <p class="figure-note">The example assumes equally likely true and false claims, independent reviewer errors given the truth, and the same accuracy on both types of claim.</p>
+          <noscript><p>At 90% accuracy, C’s false vote changes the verdict. The probability the claim is true falls to 20%.</p></noscript>
+        </figure>
       </section>
       <section id="influence"><h2>Recovering who influences whom</h2>
         <p>In the second model, the votes can be dependent. Along a hidden chain, each reviewer either copies the preceding reviewer or reports the true label. We asked which features of that chain could be reconstructed from the votes alone.</p>
+        <figure class="chain-figure"><figcaption class="eyebrow">An example of influence</figcaption>
+          <ol class="review-chain" aria-label="Possible order of influence"><li>Reviewer A</li><li>Reviewer B</li><li>Reviewer C</li></ol>
+          <p>A vote from A can reach C through B. Three identical votes can therefore trace back to a single reviewer. Across many statements, patterns of disagreement help reveal the order of the reviewers.</p>
+        </figure>
         <dl class="method-list">
           <div><dt>Marginal statistics</dt><dd>Order reviewers by how often they vote positive. When one true label is known to be more frequent, those rates identify the direction of the chain.</dd></div>
           <div><dt>Pairwise statistics</dt><dd>Use the frequency of disagreements between pairs of reviewers to recover their relative positions.</dd></div>
