@@ -164,9 +164,9 @@ strong, b { font-weight: 600; }
 .further-research { padding-block: clamp(3.2rem, 5.4vw, 5rem) clamp(3.6rem, 6.3vw, 6.5rem); }
 .further-research h2 { font-size: clamp(1.9rem, 2.8vw, 2.45rem); }
 .further-research .research-pair { margin-top: 1.35rem; }
-.campus-photo { min-width: 0; color: var(--muted); }
-.campus-photo img { width: 100%; height: auto; aspect-ratio: 1.7; object-fit: cover; object-position: 50% 48%; border-radius: .65rem; }
-.campus-photo figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .2rem .75rem; padding-top: .65rem; font-size: .82rem; line-height: 1.5; }
+.campus-photo { width: min(100%, 23rem); justify-self: center; color: var(--muted); }
+.campus-photo img { width: 100%; height: auto; border-radius: .65rem; }
+.campus-photo figcaption { display: grid; gap: .1rem; padding-top: .65rem; font-size: .82rem; line-height: 1.5; }
 .campus-photo figcaption small { font-size: .78rem; }
 .belief-chart { background: #183f39; color: #f6f5e9; padding: clamp(1.4rem, 3.1vw, 2.7rem); display: flex; flex-direction: column; justify-content: center; }
 .chart-kicker { color: #dcc7a4; display: block; font-size: .76rem; }
